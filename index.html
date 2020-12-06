@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/mycss.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+    
+<body>
+    <div class=" mysidebar shadow bg-primary">
+         <div class="list-group">
+          <div class="list-group"><img class="m-4" src="img/icn.png"></div>
+          <a class="list-group-item bg-primary text-light" href="index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Dashboard</a>
+          <a class="list-group-item bg-primary text-light" href="patron.html"><i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp; Patron Management</a>
+          <a class="list-group-item bg-primary text-light" href="book.html"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; Book Managemant</a>
+          <a class="list-group-item bg-primary text-light" href="settings.html"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; Settings</a>
+        </div>
+    </div>
+    <!-- topbar -->
+    <div class="  shadow  bg-primary  mytopbar">
+    </div>  
+    
+    <!--container-->
+    
+    <div class="shadow mycontainer  ">
+         
+        
+        <!-- table-->
+        <div class="container container-fluid shadow col-md-12 mt-4 mb-4 pt-4 pb-4">
+            <div class="d-flex ">
+            <h4 class=" text-secondary mx-auto ">DASHBOARD</h4>
+                <br/>
+                <hr class="border border-bottom"/>
+            </div>
+             
+            </div>     
+        <div class="row">
+             <div class="col-md-6"><canvas id="myChart"></canvas></div>
+            <div class="col-md-6"><canvas id="myChart1"></canvas></div>
+        </div>
+       
+        
+    </div>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'data',
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+    
+    var ctx = document.getElementById('myChart1').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'doughnut',
+
+    // The data for our dataset
+    data: {
+       
+        datasets: [{
+            label: 'data',
+           backgroundColor: ['#55618f','#dc618f', '#7777ff', '#886384'],
+            borderColor: 'rgb(255, 99, 132)',
+            data: [10, 20, 2,45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+    
+    
+    </script>
+</body>
+</html>
