@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/mycss.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+</head>
+    
+<body>
+    <div class=" mysidebar shadow bg-primary">
+         <div class="list-group">
+              <div class="list-group"><img class="m-4" src="img/icn.png"></div>
+          <a class="list-group-item bg-primary text-light" href="index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>&nbsp; Dashboard</a>
+          <a class="list-group-item bg-primary text-light" href="patron.html"><i class="fa fa-user fa-fw" aria-hidden="true"></i>&nbsp; Patron Management</a>
+          <a class="list-group-item bg-primary text-light" href="book.html"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; Book Managemant</a>
+          <a class="list-group-item bg-primary text-light" href="settings.html"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; Settings</a>
+        </div>
+    </div>
+    <!-- topbar -->
+    <div class="  shadow  bg-primary  mytopbar">
+    </div>  
+    
+    <!--container-->
+    
+    <div class="shadow mycontainer  ">
+         
+        
+        <!-- table-->
+        <div class="container container-fluid shadow col-md-12 mt-4 mb-4 pt-4 pb-4">
+            <div class="d-flex ">
+            <h4 class=" text-secondary mx-auto ">BOOK MANAGEMENT</h4>
+                <br/>
+                <hr class="border border-bottom"/>
+            </div>
+             
+            <button class="btn btn-primary " data-toggle="modal" data-target="#myModal"><i class="fa fa-plus fa-fw" aria-hidden="true"></i> Add Book</button>
+              <div class="input-group-text float-right" ><a href="" ><i class=" fa fa-search fa-fw" aria-hidden="true"></i><input class="rounded border-0" type="text" ></a></div>
+            
+            </div>
+                <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">Name</th>
+              <th scope="col">Author</th>
+              <th scope="col">Copies Available</th>
+              <th scope="col">Category</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                  <a href=""><i class="fa fa-pencil fa-fw"></i>edit</a>
+                  <a href="" onclick="myFunction()" class="text-danger"><i class="text-danger fa fa-trash fa-fw"></i>delete</a>
+                  <a href="" onclick="myFunction()" class="text-warning"><i class="text-warning fa fa-times fa-fw"></i>remove</a>
+                  <a href="" onclick="myFunction()" class="text-success"><i class="text-success fa fa-reply fa-fw"></i>remove</a>
+                </th>
+                
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>1</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <a href=""><i class="fa fa-pencil fa-fw"></i>edit</a>
+                  <a href="" onclick="myFunction()" class="text-danger"><i class="text-danger fa fa-trash fa-fw"></i>delete</a>
+                  <a href="" onclick="myFunction()" class="text-warning"><i class="text-warning fa fa-times fa-fw"></i>remove</a>
+                  <a href="" onclick="myFunction()" class="text-success"><i class="text-success fa fa-reply fa-fw"></i>remove</a>
+                </th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>22</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">
+                  <a href=""><i class="fa fa-pencil fa-fw"></i>edit</a>
+                  <a href="" onclick="myFunction()" class="text-danger"><i class="text-danger fa fa-trash fa-fw"></i>delete</a>
+                  <a href="" onclick="myFunction()" class="text-warning"><i class="text-warning fa fa-times fa-fw"></i>remove</a>
+                  <a href="" onclick="myFunction()" class="text-success"><i class="text-success fa fa-reply fa-fw"></i>reurn</a>
+                </th>
+              <td>@twitter</td>
+              <td>@twitter</td>
+              <td>4</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <!--modal-->
+   <div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+<!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header bg-primary">
+           <h6 class="modal-title text-light">Add Book</h6>
+        <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
+       
+      </div>
+      
+      <div class="modal-body ">
+          <div class="container">
+        <form class="mt-4">
+          <div class="form-group row">
+            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Name</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control form-control-sm" id="colFormLabelSm" >
+            </div>
+          </div>
+            <div class="form-group row">
+            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Author</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control form-control-sm" id="colFormLabelSm" >
+            </div>
+          </div>
+            <div class="form-group row">
+            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Copies</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control form-control-sm" id="colFormLabelSm" >
+            </div>
+          </div>
+         <div class="form-group row">
+            <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Category</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control form-control-sm" id="colFormLabelSm" >
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+     <div class="modal-footer bg-primary">
+        <button type="button" class="btn btn-secondary">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script>
+function myFunction() {
+  confirm("confirm delete");
+}
+</script>
+</body>
+</html>
