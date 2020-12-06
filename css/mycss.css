@@ -1,0 +1,25 @@
+.mysidebar{
+	position: fixed;
+	width: 15%;
+	height: 100%;
+}
+.mycontainer{
+	top:10%;
+	position: fixed;
+	left: 15%;
+	width: 80%;
+	margin:20px;
+	height:85%;
+	overflow-y: scroll;
+}
+.mytopbar{
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	height: 10%;
+	width:100%;
+	z-index: -1;
+}
+.mylogo-container{
+	height:100px;
+}
